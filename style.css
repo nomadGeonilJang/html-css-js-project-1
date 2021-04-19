@@ -145,3 +145,110 @@ html{
 
 
 /* end of section2 */
+
+
+/* section3 */
+.section-3{
+    background-color: #333;
+    padding: 5rem 0;
+}
+.gallery{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-evenly;
+    margin-top: 10rem;
+}
+
+.food-img{
+    width:24vw;
+    height: 15vw;
+    object-fit: cover;
+    box-shadow: .3rem .3rem .3rem #e92929, .5rem .5rem .1rem #a2e946, .7rem .7rem .1rem #297ce9 , .9rem .9rem .1rem #e92999;
+    transition: all 1s;
+}
+.gallery-link:hover .food-img{
+    filter:blur(0.5rem);
+    opacity: 0.5;
+    transform: scale(1.1);
+    box-shadow: 1rem 1rem .1rem #e92929, 2rem 2rem .1rem #a2e946, 3rem 3rem .1rem #297ce9, 4rem 4rem .1rem #e92999;
+}
+
+.gallery-link{
+    position:relative;
+    margin:4rem 1rem;
+}
+
+.gallery-link::before{
+    content: "";
+    position: absolute;
+    top:2vw;
+    left:80%;
+    width: .2rem;
+    /* height: 80%; */
+    height: 0;
+    background-color: #fff;
+    transition:  height 1s;
+}
+.gallery-link:hover::before{
+    height: 80%;
+    z-index: 10;
+}
+.gallery-link:hover::after{
+    width: 90%;
+}
+
+.gallery-link::after{
+    content: "";
+    position: absolute;
+    top:30%;
+    left:2rem;
+    /* width: 90%; */
+    width: 0;
+    height: 0.2rem;
+    background-color: #fff;
+    transition:  width 1s;
+}
+
+
+
+.food-name{
+    position: absolute;
+    top:3rem;
+    left:3rem;
+    font-size: 2rem;
+    font-weight: 700;
+    text-transform: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1rem;
+    color:#fff;
+    width: 0;
+    overflow: hidden;
+    transition: width 0.5s;
+}
+
+.gallery-link:hover .food-name{
+    width: 100%;
+    transition: width 1.5s 1s;
+}
+
+.food-description{
+    position: absolute;
+    bottom: 3vw;
+    left:2rem;
+    width: 70%;
+    font-size: 1.5rem;
+    font-weight: 300;
+    letter-spacing: .1rem;
+    text-transform: uppercase;
+    color:#fff;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.5s;
+}
+.gallery-link:hover .food-description{
+    opacity: 1;
+    visibility: visible;
+    transition: opacity 1s 1s;
+}
+/* end of section3 */
