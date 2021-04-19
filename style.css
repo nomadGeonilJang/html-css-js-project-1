@@ -43,6 +43,7 @@ html{
     position: absolute;
     transform: translate(-50%, -50%) scale(0);
     text-shadow: .2rem .2rem #000;
+    transition: transform .3s;
 }
 .section-1-icons i.change{
     transform: translate(-50%, -50%) scale(1);
